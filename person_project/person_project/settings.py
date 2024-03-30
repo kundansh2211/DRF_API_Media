@@ -140,3 +140,21 @@ EMAIL_HOST_USER = config('SENDER_EMAIL')
 EMAIL_HOST_PASSWORD = config('PASSWORD')
 
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/Users/kundansharma/Desktop/FS_Rev_Media_Pr/DRF_API/person_project/logs/peson_app.log'
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
